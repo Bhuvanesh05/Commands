@@ -33,3 +33,7 @@ common diff options:
   --pickaxe-all
                 show all files diff when -S is used and hit is found.
   -a  --text    treat all files as text.
+
+
+command
+$ git show commitid --numstat --pretty=format:' ADD    SUB    File ' > gitDet.txt
