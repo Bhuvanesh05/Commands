@@ -1,0 +1,40 @@
+Basic sfdx cmd to retrieve and deploy the component:
+===================================================
+
+sfdx force:source:retrieve -x manifest/. -u username
+sfdx force:source:deploy -x manifest/. -u username
+
+To view the current connected org lists:
+========================================
+sfdx force:org:list
+
+mdapi retrieve:(METADATAAPI)
+===============
+
+sfdx force:mdapi:retrieve -u aliasname -k src/package.xml -r src/
+ 
+After mdapi retrieve the all components retrieve as zipped file and (This is the difference from normal mainfest retrive and mdapi retreive) 
+
+Command to unZipped file: 
+=========================
+expand-archive -path 'src\unpackaged.zip' -destinationpath '.\unzipped'
+
+Command to Delete unZipped file:
+================================
+Remove-item 'src/unpackaged.zip' -recurse
+
+
+Command to convert the unzipped files to Force-app:
+==================================================
+
+sfdx force:mdapi:convert -r unzipped/unpackaged/ -d force-app/
+
+Command to convert Force-app metadata to Source :
+=================================================
+
+sfdx force:source:convert -r force-app/ -d src/
+
+Command to deploy metadata in Org:
+==================================
+
+sfdx force:mdapi:deploy -u Aliasname -d src/ -w 10
