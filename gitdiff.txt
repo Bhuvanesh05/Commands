@@ -35,5 +35,11 @@ common diff options:
   -a  --text    treat all files as text.
 
 
-command
+command for alignment
+
 $ git show commitid --numstat --pretty=format:' ADD    SUB    File ' > gitDet.txt
+
+$ git log --pretty=format:'"%h","%an","%aD","%s",' --shortstat --no-merges | paste - - - > log1.csv
+
+$ git show 79f68f79012dd3d6188abcce8923ab1c3513c30b --pretty=format:'"%h","%an","%aD","%s",' --shortstat --no-merges | paste - - - > log1.csv
+
