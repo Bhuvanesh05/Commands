@@ -1,4 +1,5 @@
 //update
+//new
 
 Basic sfdx cmd to retrieve and deploy the component:
 ===================================================
