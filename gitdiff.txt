@@ -1,3 +1,5 @@
+//update
+//new
 usage: git diff [<options>] [<commit>] [--] [<path>...]
    or: git diff [<options>] --cached [--merge-base] [<commit>] [--] [<path>...]
    or: git diff [<options>] [--merge-base] <commit> [<commit>...] <commit> [--] [<path>...]

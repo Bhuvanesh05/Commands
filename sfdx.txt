@@ -41,3 +41,14 @@ Command to deploy metadata in Org:
 ==================================
 
 sfdx force:mdapi:deploy -u Aliasname -d src/ -w 10
+
+Authorize With credentials:
+===========================
+sfdx auth:jwt:grant --clientid 04580y4051234051 \
+--jwtkeyfile /Users/jdoe/JWT/server.key --username jdoe@acdxgs0hub.org \
+--instanceurl https://test.salesforce.com
+
+jenkins authorization:
+=====================
+
+force:auth:jwt:grant --clientid ${CONNECTED_APP_CONSUMER_KEY} --username ${HUB_ORG} --jwtkeyfile ${jwt_key_file} --setdefaultdevhubusername --instanceurl ${SFDC_HOST}"

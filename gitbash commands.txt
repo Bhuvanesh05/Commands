@@ -74,3 +74,8 @@ To get the previous Commit Id:
 ==============================
 $ git rev-parse head^
 
+Command to view all files
+=========================
+$ git ls-files
+
+
