@@ -25,7 +25,7 @@ Exit command
 before commit we should add the file it called as staging process
 command to add
 ==============
-$ git add. --> add all the file $ git add file_name -->add the specific file which you want to commit
+$ git add . --> add all the file $ git add file_name -->add the specific file which you want to commit
 
 Commit command
 ==============

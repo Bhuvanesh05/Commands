@@ -1,10 +1,8 @@
-//update
-//new
 
 Basic sfdx cmd to retrieve and deploy the component:
 ===================================================
 
-sfdx force:source:retrieve -x manifest/. -u username
+sfdx force:source:retrieve -x manifest/package.xml -u username
 sfdx force:source:deploy -x manifest/. -u username
 
 To view the current connected org lists:
@@ -14,7 +12,7 @@ sfdx force:org:list
 mdapi retrieve:(METADATAAPI)
 ===============
 
-sfdx force:mdapi:retrieve -u aliasname -k src/package.xml -r src/
+sfdx force:mdapi:retrieve -u aliasname -k manifest/package.xml -r src/
  
 After mdapi retrieve the all components retrieve as zipped file and (This is the difference from normal mainfest retrive and mdapi retreive) 
 
@@ -44,9 +42,7 @@ sfdx force:mdapi:deploy -u Aliasname -d src/ -w 10
 
 Authorize With credentials:
 ===========================
-sfdx auth:jwt:grant --clientid 04580y4051234051 \
---jwtkeyfile /Users/jdoe/JWT/server.key --username jdoe@acdxgs0hub.org \
---instanceurl https://test.salesforce.com
+sfdx auth:jwt:grant --clientid 04580y4051234051 \ --jwtkeyfile /Users/jdoe/JWT/server.key --username jdoe@acdxgs0hub.org \ --instanceurl https://test.salesforce.com
 
 jenkins authorization:
 =====================

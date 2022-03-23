@@ -1,5 +1,10 @@
 Important note for Windows users:
 If you run SGD on a Windows system, make sure to use double quotes to prevent the parameters from being interpreted by the terminal
+Command for install:
+====================
+
+install --global sfdx-cli
+sfdx plugins:install sfdx-git-delta
 
 USAGE
   $ sfdx sgd:source:delta 
