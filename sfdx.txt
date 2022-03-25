@@ -1,4 +1,7 @@
-update from new branch
+sfdx Command Authorize org:
+==========================
+
+sfdx force:auth:web:login --setalias vscodeOrg --instanceurl https://login.salesforce.com --setdefaultusername
 
 Basic sfdx cmd to retrieve and deploy the component:
 ===================================================
