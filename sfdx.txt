@@ -1,4 +1,4 @@
-update from new branch
+update from git branch
 
 Basic sfdx cmd to retrieve and deploy the component:
 ===================================================
