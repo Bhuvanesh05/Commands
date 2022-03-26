@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-old update
-=======
 new update
->>>>>>> 190f0b78db2b814ac384ae582d7759e3e3af5dc4
 To copy the task
 ================
 - task: CopyFiles@2
