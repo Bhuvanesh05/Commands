@@ -1,4 +1,4 @@
-hai
+
 sfdx Command Authorize org:
 ==========================
 
