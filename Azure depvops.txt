@@ -1,3 +1,4 @@
+//my new changes
 To copy the task
 ================
 - task: CopyFiles@2
