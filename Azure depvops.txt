@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 //check conflict
+=======
+//my new changes
+>>>>>>> a41235bbc39e788d69e9ddf538a1ff7c217512dd
 To copy the task
 ================
 - task: CopyFiles@2
