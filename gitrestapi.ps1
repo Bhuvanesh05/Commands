@@ -1,4 +1,4 @@
-$pat = "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"
+$pat = "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"
 $header = @{Authorization = 'Basic ' + [Convert]::ToBase64String([Text.Encoding]::ASCII.GetBytes(":$($pat)")) }
 $url = "https://api.github.com/repos/Bhuvanesh05/Commands/pulls?state=all"
 write-host "url : $url" 
