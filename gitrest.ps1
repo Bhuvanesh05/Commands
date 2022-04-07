@@ -1,4 +1,4 @@
-$pat = "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"
+$pat = "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"
 $header = @{Authorization = 'Basic ' + [Convert]::ToBase64String([Text.Encoding]::ASCII.GetBytes(":$($pat)")) }
 $url = "https://api.github.com/repos/Bhuvanesh05/Commands/pulls?state=all"
 write-host "url : $url" 
@@ -23,6 +23,5 @@ $output = for ($i = 0; $i -lt $response.Count; $i++) {
       #  write-host "head branch:$build1"
        # write-host "base branch:$build2"
      }   
-     Get-Content | Select-Object * -Variable ExportMe 
+    
 }
-$ExportMe | Export-Csv -Path D:\Listofpull.csv -NoTypeInformation
