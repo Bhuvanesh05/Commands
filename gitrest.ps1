@@ -1,27 +1,27 @@
-$pat = "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"
-$header = @{Authorization = 'Basic ' + [Convert]::ToBase64String([Text.Encoding]::ASCII.GetBytes(":$($pat)")) }
+$pat = "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"
+$header = @{Authorization = 'OAuth ' + "$($pat)"}#[Convert]::ToBase64String([Text.Encoding]::ASCII.GetBytes(":$($pat)")) }
 $url = "https://api.github.com/repos/Bhuvanesh05/Commands/pulls?state=all"
-write-host "url : $url" 
+write-host "url : $url"
 $response = Invoke-RestMethod -Uri $url -Headers $header -Method Get
-
+write-host $response[0]
 $repname = $response[0].head.repo.name
-write-host "Repository Name:$repname"   
-$output = for ($i = 0; $i -lt $response.Count; $i++) {
+write-host "Repository Name:$repname"
+ for ($i = 0; $i -lt $response.Count; $i++) {
     $build = $response[$i].id
     $pullnum = $response[$i].number
     $build1 = $response[$i].head.ref
     $build2 = $response[$i].base.ref
     $build3 = $response[$i].state
+    $build4 = $response[$i].closed_at
     if(($build1 -eq 'sfdx') -and ($build2 -eq 'master'))
     {
-        "  `r`n pull request ID:$build  `r`n
-               pull Number:$pullnum  `r`n
-               head branch(From):$build1  `r`n
-               base branch(To):$build2 `r`n
-               pull request Status:$build3"
-        #write-host "pull request Status:$build3"
-      #  write-host "head branch:$build1"
-       # write-host "base branch:$build2"
+        
+        "  `n pull request ID:$build  `n
+               pull Number:$pullnum  `n
+               head branch(From):$build1  `n
+               base branch(To):$build2 `n
+               pull request Status:$build3 `n
+               pull request closed-Date:$build4"
      }   
     
 }

@@ -14,7 +14,7 @@ To view the current connected org lists:
 ========================================
 sfdx force:org:list
 
-Salesforce security token(It is used to authorize the org and access securitly):-
+Salesforce security token(It is used to authorize the org and access security):-
 =============================
 
 Your Salesforce security token is a case-sensitive alphanumeric key that is used in combination with a password to access Salesforce via API. 
