@@ -1,5 +1,13 @@
+Command to generate the .git file
+==============================
+$ git init
+
+Command to config the remote to local repository
+=============================================
+$ git remote add origin https://github.com/Bhuvanesh05/SFDXDevops.git
+
 To clone the git file for master branch:
-========================================
+====================================
 $ git clone path_url
 
 To clone the perticular branch
@@ -77,3 +85,18 @@ $ git rev-parse head^
 Command to view all files
 =========================
 $ git ls-files
+
+Command to view user crendentials
+================================
+
+$ git config --global --list
+
+Command to unset the username which is already in git bash
+======================================================
+
+$ git config --global --unset-all user.name
+$ git config --global --unset-all user.email
+
+
+$ git config --global user.name "user name"
+$ git config --global user.email "user email"
