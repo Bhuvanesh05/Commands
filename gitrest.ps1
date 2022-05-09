@@ -2,8 +2,8 @@ $pat = "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"
 $header = @{Authorization = 'OAuth ' + "$($pat)"}#[Convert]::ToBase64String([Text.Encoding]::ASCII.GetBytes(":$($pat)")) }
 $url = "https://api.github.com/repos/Bhuvanesh05/Commands/pulls?state=all"
 write-host "url : $url"
-$response = Invoke-RestMethod -Uri $url -Headers $header -Method Get
-write-host $response[0]
+$response = Invoke-RestMethod -Uri $url -Headers $header -Method Get 
+write-host $response[0] | ConvertTo-Json -Depth 10 > result.json
 $repname = $response[0].head.repo.name
 write-host "Repository Name:$repname"
  for ($i = 0; $i -lt $response.Count; $i++) {
@@ -22,6 +22,8 @@ write-host "Repository Name:$repname"
                base branch(To):$build2 `n
                pull request Status:$build3 `n
                pull request closed-Date:$build4"
-     }   
+     }
     
 }
+
+#test
