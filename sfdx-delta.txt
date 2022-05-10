@@ -10,11 +10,11 @@ USAGE
   $ sfdx sgd:source:delta 
 
 To get the previous and current commit Id:
-=-======-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 sfdx sgd:source:delta --to "HEAD" --from "HEAD^" --output .
 
 To mention in specific path
-=--========================
+=-=-=-=-=-=-=-=-=-=-=-=-=-
 sfdx sgd:source:delta --to "HEAD" --from "HEAD^" --output changed-sources/ --generate-delta
 
 which means:
